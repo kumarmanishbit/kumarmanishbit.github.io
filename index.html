@@ -1,55 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 </head>
 
 <body>
-  <div>
-<img src="images/sunny.png" style="width:200px;height:150px">
-  </div>
 
-<div id="result">
+<!-- ********************** Begin Pega content ********************** -->
+<script src ='https://lab0545.lab.pega.com/prweb/?pyActivity=pzIncludeMashupScripts'></script>
+<div data-pega-gadgetname ='PegaGadget' 
+data-pega-action ='display' 
+data-pega-action-param-harnessname ='CityScore' 
+data-pega-action-param-classname ='Data-Portal' 
+data-pega-action-param-model ='' 
+data-pega-action-param-readonly ='false' 
+data-pega-isdeferloaded ='false' 
+data-pega-applicationname ='Metropolis' 
+data-pega-threadname ='STANDARD' 
+data-pega-systemid ='pega'
+data-pega-resizetype ='stretch' 
+data-pega-url ='https://lab0545.lab.pega.com/prweb/' 
+data-pega-redirectguests ='true' ></div>
 
+<!-- ********************** End Pega content ********************** -->
 
-</div>
-
-<h1></h1>
-
-<button>Change User !!!</button>
 </body>
-
-<script>
-
-var images = document.querySelector('img');
-
-var imageSource = ['sunny.png','rainy.png','pic_mountain.jpg','ice-cream.jpg'];
-
-var count = 0;
-
-images.onclick = setInterval(alertFunc, 1000);
-
-function alertFunc(){
-count++;
-count = count%imageSource.length;
-images.setAttribute('src','images/'+imageSource[count]);
-}
-var myButton = document.querySelector('button');
-var myHeading = document.querySelector('h1');
-//setTimeout(function(){ alert("Hello"); }, 3000);
-
-function setUserName() {
-  var myName = prompt('Please enter your name.');
-  localStorage.setItem('name', myName);
-  myHeading.textContent = 'You Enter, ' + myName;
-}
-
-myButton.onclick = setUserName;
-if(!localStorage.getItem('name')) {
-  setUserName();
-} else {
-  var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'You Enter, ' + storedName;
-}
-</script>
 
 </html>
